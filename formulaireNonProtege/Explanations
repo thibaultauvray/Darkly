@@ -1,0 +1,2 @@
+Sur la page recover, le formulaire est en hidden, si on change la value de ce champs avec linspecteur d'element, avec une valeur perso il prend cette valeuer sans verificaiton
+et donc potientielement dangereux.

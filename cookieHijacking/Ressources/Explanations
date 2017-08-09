@@ -1,0 +1,1 @@
+Avec un plugin permettant de lire les cookie on voit un cookie i_am_admin aevc comme valeur false en md5, on le modifie en true en md5, et on a le flag

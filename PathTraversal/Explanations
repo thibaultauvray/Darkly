@@ -1,0 +1,1 @@
+SI on remplace la variable getpage  par /?page=../../../../../../../etc/passwd il peut avoir acces a etc passwd

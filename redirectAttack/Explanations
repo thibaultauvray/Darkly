@@ -1,0 +1,4 @@
+http://192.168.43.128/index.php?page=redirect&site=www.google.com
+
+Le redirect est pas protege et prend directement l'URL de la variable, et pourrait rediriger vers un site
+dangereux.
