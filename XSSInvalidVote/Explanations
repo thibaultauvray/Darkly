@@ -1,0 +1,3 @@
+Sur la page : /index.php?page=survey.
+
+on inspecte n'importe quelle balise select de cette page, On modifie la valeur d'une des options (ne pas choisir l'option 1) de cette balise avec un autre int different. puis on selectionne cette option 
