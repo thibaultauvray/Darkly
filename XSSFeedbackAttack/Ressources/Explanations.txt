@@ -1,0 +1,3 @@
+dans la page ?page=feedback
+
+remplir une des balises d'input par le mot "script" puis submit
