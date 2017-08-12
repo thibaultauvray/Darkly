@@ -1,4 +1,0 @@
-Les valeurs envoyes au formulaire ne sont pas proteges, donc si on change les valeurs envoye par le formulaire par des valeurs non donnes 
-par des donnees non voulues.
-
-(Firefox > Modifie headers > change valeur > flag)
